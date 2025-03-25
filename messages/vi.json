@@ -1,0 +1,173 @@
+{
+  "app": {
+    "title": "Hôm nay ăn gì?",
+    "description": "Khám phá món ăn hoàn hảo dựa trên các điều kiện cụ thể."
+  },
+  "errors": {
+    "location": {
+      "notFound": "Không tìm thấy vị trí. Vui lòng thử lại với vị trí khác.",
+      "permissionDenied": "Quyền truy cập vị trí bị từ chối. Vui lòng bật dịch vụ vị trí.",
+      "timeout": "Yêu cầu vị trí hết thời gian chờ. Vui lòng thử lại.",
+      "unavailable": "Dịch vụ vị trí không khả dụng. Vui lòng thử lại sau.",
+      "unknown": "Đã xảy ra lỗi không xác định khi lấy vị trí của bạn."
+    },
+    "weather": {
+      "fetchFailed": "Không lấy được dữ liệu thời tiết. Vui lòng thử lại.",
+      "invalidCoordinates": "Tọa độ không hợp lệ.",
+      "serviceUnavailable": "Dịch vụ thời tiết hiện không khả dụng. Vui lòng thử lại sau.",
+      "unknown": "Đã xảy ra lỗi không xác định khi lấy dữ liệu thời tiết."
+    },
+    "ai": {
+      "fetchFailed": "Không lấy được gợi ý từ AI. Vui lòng thử lại.",
+      "serviceUnavailable": "Dịch vụ AI hiện không khả dụng. Vui lòng thử lại sau.",
+      "unknown": "Đã xảy ra lỗi không xác định khi lấy gợi ý."
+    },
+    "network": {
+      "offline": "Có vẻ như bạn đang ngoại tuyến. Vui lòng kiểm tra kết nối internet.",
+      "timeout": "Yêu cầu mạng hết thời gian chờ. Vui lòng thử lại.",
+      "unknown": "Đã xảy ra lỗi mạng không xác định."
+    }
+  },
+  "location": {
+    "title": "Cài Đặt Vị Trí",
+    "description": "Chúng tôi tự động xác định vị trí của bạn hoặc bạn có thể nhập thủ công",
+    "refresh": "Làm mới vị trí của tôi",
+    "finding": "Đang tìm gợi ý...",
+    "detecting": "Đang xác định vị trí của bạn...",
+    "manual": "Hoặc nhập vị trí của bạn thủ công:",
+    "placeholder": "Tên thành phố (ví dụ: Hà Nội, Việt Nam)",
+    "search_placeholder": "Tìm kiếm vị trí",
+    "use_current_location": "Sử dụng vị trí hiện tại của tôi",
+    "search": "Tìm kiếm",
+    "empty_input": "Vui lòng nhập vị trí",
+    "current_location": "Vị trí hiện tại",
+    "coordinates": "Tọa độ",
+    "geolocation_error": "Đã xảy ra lỗi khi lấy vị trí của bạn"
+  },
+  "weather": {
+    "title": "Thời Tiết Hiện Tại",
+    "description": "Điều kiện thời tiết tại khu vực của bạn",
+    "location": "Vị trí:",
+    "temperature": "Nhiệt độ:",
+    "condition": "Điều kiện:",
+    "humidity": "Độ ẩm",
+    "uv_index": "Chỉ số UV",
+    "hourly_forecast": "Dự báo 6 giờ tới",
+    "no_data": "Không có dữ liệu thời tiết.",
+    "loading": "Đang tải dữ liệu thời tiết...",
+    "error": "Không tải được dữ liệu thời tiết.",
+    "retry": "Thử lại",
+    "conditions": {
+      "0": "Trời quang",
+      "1": "Chủ yếu quang đãng",
+      "2": "Có mây rải rác",
+      "3": "Nhiều mây",
+      "45": "Sương mù",
+      "48": "Sương mù giá",
+      "51": "Mưa phùn nhẹ",
+      "53": "Mưa phùn vừa",
+      "55": "Mưa phùn dày đặc",
+      "56": "Mưa phùn đóng băng nhẹ",
+      "57": "Mưa phùn đóng băng dày đặc",
+      "61": "Mưa nhỏ",
+      "63": "Mưa vừa",
+      "65": "Mưa to",
+      "66": "Mưa đóng băng nhẹ",
+      "67": "Mưa đóng băng nặng",
+      "71": "Tuyết rơi nhẹ",
+      "73": "Tuyết rơi vừa",
+      "75": "Tuyết rơi dày",
+      "77": "Hạt tuyết",
+      "80": "Mưa rào nhẹ",
+      "81": "Mưa rào vừa",
+      "82": "Mưa rào dữ dội",
+      "85": "Mưa tuyết nhẹ",
+      "86": "Mưa tuyết nặng",
+      "95": "Dông",
+      "96": "Dông kèm mưa đá nhẹ",
+      "99": "Dông kèm mưa đá nặng",
+      "unknown": "Không xác định"
+    }
+  },
+  "map": {
+    "loading": "Đang tải bản đồ...",
+    "title": "Bản Đồ Vị Trí",
+    "description": "Khu vực vị trí ước lượng",
+    "approximate_location": "Vị trí ước lượng của bạn",
+    "no_location": "Chế độ xem bản đồ mặc định - chưa đặt vị trí",
+    "exact_location": "Vị trí chính xác của bạn"
+  },
+  "food": {
+    "title": "Món Ăn Được Đề Xuất",
+    "description": "Món ăn hoàn hảo cho thời điểm hiện tại",
+    "loading": "Đang tải gợi ý...",
+    "error": "Không tải được gợi ý.",
+    "retry": "Thử lại",
+    "no_weather": "Vui lòng chọn vị trí để xem gợi ý món ăn dựa trên thời tiết.",
+    "no_recommendations": "Không có gợi ý nào cho thời tiết hiện tại.",
+    "person": "người",
+    "people": "người",
+    "number_of_diners": "Số người dùng bữa",
+    "settings": {
+      "title": "Cài Đặt Món Ăn",
+      "description": "Tùy chỉnh gợi ý món ăn của bạn",
+      "diners": {
+        "title": "Số Người Dùng Bữa",
+        "description": "Có bao nhiêu người sẽ dùng bữa"
+      },
+      "changes_pending": "Phát hiện thay đổi, ấn cập nhật yêu cầu để đề xuất mới.",
+      "advanced": "Cài Đặt Nâng Cao",
+      "meal_type": {
+        "title": "Loại Bữa Ăn",
+        "description": "Bạn dự định dùng bữa kiểu gì",
+        "single_dish": "Món đơn",
+        "full_set": "Đầy đủ"
+      },
+      "special_requirements": {
+        "title": "Yêu Cầu Đặc Biệt",
+        "description": "Bất kỳ yêu cầu hoặc sở thích đặc biệt nào",
+        "placeholder": "Nhập yêu cầu đặc biệt của bạn"
+      },
+      "update_recommendations": "Cập nhật yêu cầu"
+    },
+    "exclusions": {
+      "title": "Loại Trừ Món Ăn",
+      "description": "Chỉ định các món bạn không thích, dị ứng hoặc cần tránh",
+      "placeholder": "Nhập món ăn hoặc nguyên liệu",
+      "add": "Thêm",
+      "empty": "Chưa có món ăn nào bị loại trừ"
+    },
+    "details": {
+      "title": "Thông Tin Chi Tiết Về Món Ăn",
+      "description": "Mô tả",
+      "ingredients": "Nguyên liệu",
+      "preparation": "Chuẩn bị",
+      "noInfo": "Không có thông tin về món ăn này.",
+      "loading": "Đang tải thông tin món ăn...",
+      "error": "Không tải được thông tin món ăn.",
+      "back": "Quay lại gợi ý",
+      "showRestaurants": "Hiển thị nhà hàng gợi ý",
+      "hideRestaurants": "Ẩn nhà hàng"
+    }
+  },
+  "theme": {
+    "light": "Sáng",
+    "dark": "Tối",
+    "system": "Hệ thống"
+  },
+  "language": {
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "fr": "Français"
+  },
+  "footer": {
+    "author": "dawndev",
+    "copyright": ""
+  },
+  "notFound": {
+    "title": "Không Tìm Thấy Trang",
+    "message": "Xin lỗi, trang bạn tìm kiếm không tồn tại hoặc đã bị di chuyển.",
+    "home": "Về Trang Chủ",
+    "back": "Quay Lại"
+  }
+}

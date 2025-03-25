@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_RECAPTCHA_ENABLED=true
+      - NEXT_PUBLIC_API_URL=http://localhost:3000/api
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_CACHE_ENABLED=true
+    depends_on:
+      - redis
+    networks:
+      - app-network
+    # For development mode, you can use these volumes to enable hot reloading
+    # volumes:
+    #   - ./src:/app/src
+    #   - ./public:/app/public
+    #   - ./messages:/app/messages
+  
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - app-network
+    restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  redis-data:

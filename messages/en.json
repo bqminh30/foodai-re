@@ -1,0 +1,173 @@
+{
+  "app": {
+    "title": "What to eat today?",
+    "description": "Discover the perfect dish based on specific conditions."
+  },
+  "errors": {
+    "location": {
+      "notFound": "Location not found. Please try again with a different location.",
+      "permissionDenied": "Location access denied. Please enable location services.",
+      "timeout": "Location request timed out. Please try again.",
+      "unavailable": "Location services are unavailable. Please try again later.",
+      "unknown": "An unknown error occurred while fetching your location."
+    },
+    "weather": {
+      "fetchFailed": "Failed to retrieve weather data. Please try again.",
+      "invalidCoordinates": "Invalid coordinates.",
+      "serviceUnavailable": "Weather service is currently unavailable. Please try again later.",
+      "unknown": "An unknown error occurred while fetching weather data."
+    },
+    "ai": {
+      "fetchFailed": "Failed to get suggestions from AI. Please try again.",
+      "serviceUnavailable": "AI service is currently unavailable. Please try again later.",
+      "unknown": "An unknown error occurred while fetching suggestions."
+    },
+    "network": {
+      "offline": "It seems like you're offline. Please check your internet connection.",
+      "timeout": "Network request timed out. Please try again.",
+      "unknown": "An unknown network error occurred."
+    }
+  },
+  "location": {
+    "title": "Location Settings",
+    "description": "We automatically detect your location or you can enter it manually.",
+    "refresh": "Refresh my location",
+    "finding": "Finding suggestions...",
+    "detecting": "Detecting your location...",
+    "manual": "Or enter your location manually:",
+    "placeholder": "City name (e.g., Hanoi, Vietnam)",
+    "search_placeholder": "Search location",
+    "use_current_location": "Use my current location",
+    "search": "Search",
+    "empty_input": "Please enter a location",
+    "current_location": "Current location",
+    "coordinates": "Coordinates",
+    "geolocation_error": "An error occurred while fetching your location."
+  },
+  "weather": {
+    "title": "Current Weather",
+    "description": "Weather conditions in your area",
+    "location": "Location:",
+    "temperature": "Temperature:",
+    "condition": "Condition:",
+    "humidity": "Humidity",
+    "uv_index": "UV Index",
+    "hourly_forecast": "6-hour forecast",
+    "no_data": "No weather data available.",
+    "loading": "Loading weather data...",
+    "error": "Failed to load weather data.",
+    "retry": "Retry",
+    "conditions": {
+      "0": "Clear sky",
+      "1": "Mostly clear",
+      "2": "Partly cloudy",
+      "3": "Cloudy",
+      "45": "Fog",
+      "48": "Freezing fog",
+      "51": "Light drizzle",
+      "53": "Moderate drizzle",
+      "55": "Heavy drizzle",
+      "56": "Light freezing drizzle",
+      "57": "Heavy freezing drizzle",
+      "61": "Light rain",
+      "63": "Moderate rain",
+      "65": "Heavy rain",
+      "66": "Light freezing rain",
+      "67": "Heavy freezing rain",
+      "71": "Light snow",
+      "73": "Moderate snow",
+      "75": "Heavy snow",
+      "77": "Snow grains",
+      "80": "Light rain showers",
+      "81": "Moderate rain showers",
+      "82": "Heavy rain showers",
+      "85": "Light snow showers",
+      "86": "Heavy snow showers",
+      "95": "Thunderstorm",
+      "96": "Thunderstorm with light hail",
+      "99": "Thunderstorm with heavy hail",
+      "unknown": "Unknown"
+    }
+  },
+  "map": {
+    "loading": "Loading map...",
+    "title": "Location Map",
+    "description": "Estimated location area",
+    "approximate_location": "Your estimated location",
+    "no_location": "Default map view - no location set",
+    "exact_location": "Your exact location"
+  },
+  "food": {
+    "title": "Recommended Dishes",
+    "description": "The perfect dish for the current moment",
+    "loading": "Loading suggestions...",
+    "error": "Failed to load suggestions.",
+    "retry": "Retry",
+    "no_weather": "Please select a location to view food suggestions based on the weather.",
+    "no_recommendations": "No suggestions for the current weather.",
+    "person": "person",
+    "people": "people",
+    "number_of_diners": "Number of diners",
+    "settings": {
+      "title": "Food Settings",
+      "description": "Customize your food suggestions",
+      "diners": {
+        "title": "Number of Diners",
+        "description": "How many people will be dining"
+      },
+      "changes_pending": "Changes detected, click update request for new suggestions.",
+      "advanced": "Advanced Settings",
+      "meal_type": {
+        "title": "Meal Type",
+        "description": "What type of meal are you planning?",
+        "single_dish": "Single dish",
+        "full_set": "Full set"
+      },
+      "special_requirements": {
+        "title": "Special Requirements",
+        "description": "Any specific requests or preferences",
+        "placeholder": "Enter your special requirements"
+      },
+      "update_recommendations": "Update request"
+    },
+    "exclusions": {
+      "title": "Food Exclusions",
+      "description": "Specify dishes you dislike, are allergic to, or need to avoid",
+      "placeholder": "Enter dishes or ingredients",
+      "add": "Add",
+      "empty": "No excluded dishes yet"
+    },
+    "details": {
+      "title": "Detailed Food Information",
+      "description": "Description",
+      "ingredients": "Ingredients",
+      "preparation": "Preparation",
+      "noInfo": "No information available for this dish.",
+      "loading": "Loading food details...",
+      "error": "Failed to load food details.",
+      "back": "Back to suggestions",
+      "showRestaurants": "Show recommended restaurants",
+      "hideRestaurants": "Hide restaurants"
+    }
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "fr": "Français"
+  },
+  "footer": {
+    "author": "dawndev",
+    "copyright": ""
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "Sorry, the page you're looking for does not exist or has been moved.",
+    "home": "Back to Home",
+    "back": "Go Back"
+  }
+}
