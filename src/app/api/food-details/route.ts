@@ -14,29 +14,31 @@ async function handleFoodDetailsRequest(foodName: string | null, locale: string 
       );
     }
 
-    if (!isFeatureEnabled('recaptcha') && process.env.NODE_ENV !== 'development') {
-      if (!recaptchaToken) {
-        return NextResponse.json(
-          { error: 'reCAPTCHA verification required' } as ApiErrorResponse,
-          { status: 400 }
-        );
-      }
+    if (isFeatureEnabled('recaptcha')) {
+  if (!recaptchaToken) {
+    return NextResponse.json(
+      { error: 'reCAPTCHA verification required' } as ApiErrorResponse,
+      { status: 400 }
+    );
+  }
 
-      const verification = await verifyRecaptchaToken(
-        recaptchaToken,
-        'getFoodDetails',
-        0.5 // minimum score threshold
-      );
+  console.log('reCAPTCHA token:', recaptchaToken);
+  const verification = await verifyRecaptchaToken(
+    recaptchaToken,
+    'getFoodDetails',
+    0.5
+  );
+  console.log('reCAPTCHA verification result:', verification);
 
-      if (!verification.success) {
-        console.error('reCAPTCHA verification failed:', verification.errorCodes);
-        return NextResponse.json(
-          { error: 'reCAPTCHA verification failed', details: verification } as ApiErrorResponse,
-          { status: 400 }
-        );
-      }
+  if (!verification.success) {
+    console.error('reCAPTCHA verification failed:', verification.errorCodes);
+    return NextResponse.json(
+      { error: 'reCAPTCHA verification failed', details: verification } as ApiErrorResponse,
+      { status: 400 }
+    );
+  }
+}
 
-    }
 
     if (!foodName) {
       return NextResponse.json(

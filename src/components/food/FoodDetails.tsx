@@ -18,22 +18,23 @@ export function FoodDetails({ foodName, onBack }: FoodDetailsProps) {
   const t = useTranslations('food.details');
   const locale = useLocale();
   const features = useFeatureFlags();
-  const [foodInfo, setFoodInfo] = useState<FoodInfo | null>(null); 
+  const [foodInfo, setFoodInfo] = useState<FoodInfo | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   const { executeRecaptcha } = useRecaptchaToken({
-    action: 'getFoodDetails',
+    action: 'food review',
   });
 
   useEffect(() => {
     const fetchFoodDetails = async () => {
       setIsLoading(true);
       setError(null);
-      
+
       try {
 
         let recaptchaToken = null;
+        console.log('Recaptcha token:', recaptchaToken, features);
         if (features.recaptcha) {
           try {
             recaptchaToken = await executeRecaptcha();
@@ -44,16 +45,16 @@ export function FoodDetails({ foodName, onBack }: FoodDetailsProps) {
             console.error('reCAPTCHA execution failed:', err);
           }
         }
-        
-        const requestBody: {name: string, locale: string, recaptchaToken?: string} = {
+
+        const requestBody: { name: string, locale: string, recaptchaToken?: string } = {
           name: foodName,
           locale,
         };
-        
+
         if (features.recaptcha && recaptchaToken) {
           requestBody.recaptchaToken = recaptchaToken;
         }
-        
+
         const response = await fetch('/api/food-details', {
           method: 'POST',
           headers: {
@@ -61,12 +62,12 @@ export function FoodDetails({ foodName, onBack }: FoodDetailsProps) {
           },
           body: JSON.stringify(requestBody),
         });
-        
+
         if (!response.ok) {
           const errorData = await response.json();
           throw new Error(errorData.error || `Error: ${response.status}`);
         }
-        
+
         const data = await response.json();
         setFoodInfo(data);
       } catch (err) {
@@ -77,7 +78,7 @@ export function FoodDetails({ foodName, onBack }: FoodDetailsProps) {
         setIsLoading(false);
       }
     };
-    
+
     fetchFoodDetails();
   }, [foodName, t, locale, features.recaptcha, executeRecaptcha]);
 
@@ -115,13 +116,13 @@ export function FoodDetails({ foodName, onBack }: FoodDetailsProps) {
           {t('back')}
         </Button>
       </div>
-      
+
       <div className="space-y-3">
         <div>
           <h4 className="font-medium">{t('description')}</h4>
           <p className="text-sm">{foodInfo.description}</p>
         </div>
-        
+
         <div>
           <h4 className="font-medium">{t('ingredients')}</h4>
           <ul className="list-disc list-inside text-sm">
@@ -130,7 +131,7 @@ export function FoodDetails({ foodName, onBack }: FoodDetailsProps) {
             ))}
           </ul>
         </div>
-        
+
         <div>
           <h4 className="font-medium">{t('preparation')}</h4>
           <p className="text-sm">{foodInfo.preparation}</p>
